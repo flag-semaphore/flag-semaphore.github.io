@@ -1,23 +1,12 @@
-<html>
-    <head>
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div style="width:100%;height:100%;max-width:100%">
-            <div id="game"></div>
-        </div>
-        <script>
-            EJS_player = "#game";
-            EJS_core = "mednafen_psx";
-            EJS_pathtodata = "https://demo.emulatorjs.org/data/";
-            EJS_gameUrl = "https://github.com/flag-semaphore/flag-semaphore.github.io/raw/main/track1.bin";
-            EJS_biosUrl = "https://github.com/flag-semaphore/flag-semaphore.github.io/raw/main/bios.bin";
-        </script>
-        <script src="https://demo.emulatorjs.org/data/loader.js"></script>
-    </body>
-</html>
+<button onclick="load()">Load Game</button>
+<div id="game"></div>
+<script type="text/javascript">
+    EJS_player = '#game';
+    EJS_gameUrl = '/your/game/rom.zip';
+    EJS_core = 'snes9x';
+    function load() {
+      var script = document.createElement('script');
+      script.src = 'js/libretro.js'
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+</script>
